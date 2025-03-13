@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+header nav ul li a:hover {
+    color: #f0f0f0;
+    transition: 0.3s ease;
+}
+
+/* Page content styles */
+.donate-content {
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.donate-content h1 {
+    font-size: 32px;
+    color: #333;
+}
+
+.donate-content p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Card styles */
+.card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.card-header {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.card-header h3 {
+    font-size: 24px;
+    color: #333;
+}
+
+.card-header h6 {
+    font-size: 16px;
+    color: #888;
+}
+
+.card-header select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px 0;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.card-header select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Button styles */
+button {
+    background: linear-gradient(0deg, rgba(7,232,250,1) 0%, rgba(246,15,253,1) 95%, rgba(0,22,255,1) 100%);
+    border: none;
+    color: white;
+    padding: 15px 0;
+    width: 100%;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(0deg, rgba(0,22,255,1) 0%, rgba(246,15,253,1) 95%, rgba(7,232,250,1) 100%);
+}
+
+/* Hidden class */
+.hidden {
+    display: none;
+}
+
+/* QR Code section */
+#qrcode {
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Mobile styles */
+@media (max-width: 600px) {
+    .donate-content {
+        padding: 20px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+
+    .card-header h3 {
+        font-size: 20px;
+    }
+
+    .card-header h6 {
+        font-size: 14px;
+    }
+}
+</style>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="donate.html">Donate</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="donate-content">
+    <h1>Donate</h1>
+    <p>Your donations help us continue our mission.</p>
+        <div class="card card-outline card-tabs" style="width: 480px; border-radius: 5px; background: linear-gradient(0deg, rgba(7,232,250,1) 0%, rgba(246,15,253,1) 95%, rgba(0,22,255,1) 100%); margin-top:50px; padding:15px">
+            <div class="card-header p-0 pt-1 border-bottom-0 ml-1">
+			<br>
+				<br>
+			  <h3>Buy Voucher now!</h3>
+              <h6>(Gcash Payment)</h6>
+
+                <form id="paymentForm" action="https://s2.klinternetservices.com/xendit/ewallet" method="GET">
+                  
+                    <input type="hidden" class="form-control" id="method" name="method" value="s0bGPkvsE6PA7xTO18kwLrrdn"></input> 
+                    <div class="form-group mt-3">
+                            <p>Select promo:</p>
+                            <select id="amountDropdown" name="amount" class="form-control text-lg btn-block">
+              
+                            <!--PAKI-EDIT NG VALUE SAKA DESCRIPTION BASE SA VOUCHER AMOUNT NA NAKA-UPLOAD SA IYONG KLCIS ACCOUNT -->
+							<option value="5">₱5.00 - 1 HOUR INTERNET</option>
+							<option value="8">₱8.00 - 3 HOURS INTERNET</option>
+							<option value="10"selected>₱10.00 - 5 HOURS INTERNET </option>
+							<option value="12">₱12.00 - 8 HOURS INTERNET</option>
+							<option value="15">₱15.00 - 12 HOURS INTERNET</option>
+							<option value="25">₱25.00 - 1 DAY INTERNET</option>
+							<option value="80">₱80.00 - 1 WEEK INTERNET</option>
+							<option value="299">₱299.00 - 1 MONTH INTERNET</option>
+							<option value="399">₱399.00 - 1 MONTH INTERNET Add-On 2 online Devices</option>
+                            </select>             
+                          <!--PAKI-PALITAN ANG value="PUT_YOUR_KLCIS_API_KEY_HERE" ng iyong KLCiS API KEY-->
+                        <input type="hidden" class="form-control" id="tokenInput" name="token" value="s0bGPkvsE6PA7xTO18kwLrrdn">
+                        <input type="tel" id="numberInput" class="form-control text-center text-lg" style="width:100%; letter-spacing: 3px; display:none" name="number" value="09227823014">
+                      </div>
+      
+                      <button type="submit" class="btn btn-md btn-primary btn-block " style="background: linear-gradient(0deg, rgba(7,232,250,1) 0%, rgba(246,15,253,1) 95%, rgba(0,22,255,1) 100%);" id="gcash">Pay with<img src="resources/gcash_logo.png" style="height: 33px; width: 120px;"></button>
+                    
+                </form>
+                <div class="text-center hidden">                  
+                  <button class="btn btn-md btn-danger btn-block rounded-pill mt-1" style="background: linear-gradient(0deg, rgba(7,232,250,1) 0%, rgba(246,15,253,1) 95%, rgba(0,22,255,1) 100%);" id="generate_qr"> Generate QR</button>               
+                </div>
+                <div id="qrcode"></div>
+				<br>
+				<br>
+      </div> 
+    </div>			
+</div> 
+	
+  </section>
+
+  <footer>
+    <p>© 2025 pusacatdogs</p>
+  </footer>
+</body>
+</html>
